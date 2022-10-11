@@ -1,2 +1,2 @@
 # com421
-com421 coding exercises and work
+com421 DATA STRUCTURES, ALGORITHMS AND MATHEMATICS
