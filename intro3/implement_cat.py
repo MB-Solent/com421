@@ -1,6 +1,3 @@
-import random
-
-
 class Cat:
     def __init__(self, name, age, weight):
         self.name = name
