@@ -7,35 +7,33 @@ class Cat:
         self.age = age
         self.weight = weight
 
-    def eat(self):
-        self.weight += 1
-        print(self.name + " just ate some food.")
+    def eat(self, amount=1):
+        self.weight += amount
+        print(f"{self.name} just ate {amount} food.")
+        print(f"{self.name}'s weight is now {self.weight}.")
 
-    def meow(self):
-        print("mrrpp")
-
-    def check_fat(self):
-        print(self.name + " is " + str(self.weight) + " fat.")
-        if self.weight >= 5:
-            print("oh lawd he comin")
+    def diet(self, amount=1):
+        if amount >= self.weight:
+            print(f"That is too much diet for {self.name}'s weight!")
         else:
-            print("what a lad.")
+            initial_weight = self.weight
+            self.weight -= amount
+            print(f"{self.name} went on a diet! Their weight went from {initial_weight} to {self.weight}. ")
 
 
 # Initialize the cats
 
 cat1 = Cat("Binnie", 4, 4)
 cat2 = Cat("Clyde", 1, 2)
-
-# Feet the bois
+cat3 = Cat("Old Tom", 10, 6)
+# Feed
 
 cat1.eat()
-cat1.meow()
-
 cat2.eat()
-cat2.meow()
+cat3.eat()
 
-# How fat are they
+# Diet
 
-cat1.check_fat()
-cat2.check_fat()
+cat1.diet()
+cat2.diet()
+cat3.diet()
