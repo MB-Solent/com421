@@ -39,7 +39,7 @@ class Queue:
                 print("Not enough space to add another item.")
                 break
 
-    def remove(self, amount):
+    def remove(self, amount=1):
 
         # check if already empty
 
