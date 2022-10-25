@@ -9,6 +9,7 @@ class Node:
     def link(self, new_next):
         pass
 
+
 class LinkedList:
 
     def __init__(self):
