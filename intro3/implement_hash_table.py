@@ -9,7 +9,7 @@ class HashTable:
         bucket_id = self.calc_hash_code(key) % self.capacity
         for item in self.bucket_list[bucket_id]:
             if item[0] == key:
-                return item[1]  # return valueS
+                return item[1]  # return value from tuple
         pass
 
     def put(self, key, value):
@@ -29,9 +29,7 @@ class HashTable:
 x = HashTable(10)
 
 print(x)
-print(x.calc_hash_code("test") % 10)
 x.put("test", 5)
-x.put()
 print(x)
 
 print(x.get("test"))
