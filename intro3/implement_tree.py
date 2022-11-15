@@ -45,15 +45,19 @@ class BinaryTree:
             print("Tree is empty.")
 
 
-tree = BinaryTree()
+def run():
+    tree = BinaryTree()
 
-tree.add(5)
+    tree.add(5)
 
-tree.add(2)
+    tree.add(2)
 
-tree.add(6)
+    tree.add(6)
 
-tree.add(3, 4, 20, 15)
+    tree.add(3, 4, 20, 15)
 
-tree.recursive_print()
+    tree.recursive_print()
 
+
+if __name__ == "__main__":
+    run()
