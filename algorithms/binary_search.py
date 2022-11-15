@@ -3,18 +3,15 @@ import math
 
 def binary_search(data, target):
 
+    found = False
+
     range_start = 0
     range_end = len(data) - 1
 
-    while True:
+    while found is False and range_start <= range_end:
 
         divider = math.floor((range_start + range_end) / 2)  # get midpoint between indices, round down
         # print(f"Start:{range_start}:{data[range_start]},Divider:{divider}:{data[divider]},End:{range_end}:{data[range_end]}")
-
-        if divider == range_start and divider == range_end:
-            if data[divider] != target:
-                print("Target not in array.")
-                break
 
         if target < data[divider]:
             range_end = divider - 1
@@ -23,9 +20,11 @@ def binary_search(data, target):
             range_start = divider + 1
 
         else:
-            print("Target found.")
-            break
-
+            found = True
+    if found is True:
+        print("Target found.")
+    else:
+        print(f"Target not found.")
     # print("Target not found in data set.")
 
 
