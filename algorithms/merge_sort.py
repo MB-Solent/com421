@@ -33,18 +33,18 @@ def merge(list_a, list_b):
     if leftover_list is not None:
         for i in range(leftover_counter, len(leftover_list)):
             sorted_list.append(leftover_list[i])
-
     return sorted_list
 
 
 def mergesort(target_list):
-    if len(target_list) == 1:
-        return list
-    else:
-        midpoint = math.floor(len(target_list)/2)
 
-        list_a = [list[i] for i in range(midpoint)]
-        list_b = [list[i] for i in range(midpoint, len(target_list))]
+    if len(target_list) == 1:
+        return target_list
+    else:
+        midpoint = math.floor(len(target_list) / 2)
+
+        list_a = [target_list[i] for i in range(midpoint)]
+        list_b = [target_list[i] for i in range(midpoint, len(target_list))]
 
         list_a = mergesort(list_a)
         list_b = mergesort(list_b)
@@ -52,11 +52,3 @@ def mergesort(target_list):
         output_list = merge(list_a, list_b)
 
         return output_list
-
-
-test = [4, 7, 2, 5, 6, 8, 1]
-
-a = [2,5,8]
-b = [1,3,4]
-
-print(mergesort(test))
